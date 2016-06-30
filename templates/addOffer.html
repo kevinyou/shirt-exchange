@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Python Flask Bucket List App</title>
+
+
+        <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+
+        <script src="../static/js/jquery-2.2.4.min.js"></script>
+
+
+    </head>
+
+    <body>
+
+        <div class="container">
+ 
+            {% with active_page='addoffer',user=1 %}
+                {% include 'header.html' %}
+            {% endwith %}
+
+            <section>
+                <form class="form-horizontal" method="post" action="/addOffer">
+                    <fieldset>
+
+                        <!-- Form Name -->
+                        <legend>Create Your Offer!</legend>
+
+                        <legend>Shirt that you have</legend>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="txtCompany">Company/Organization</label>
+                            <div class="col-md-4">
+                                <input id="txtCompany" name="inputCompany" type="text" class="form-control input-md">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="txtSize">Size</label>
+                            <div class="col-md-4">
+                                <input id="txtSize" name="inputSize" type="text" placeholder="S, M, L, XL, ..." class="form-control input-md">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="txtColor">Color</label>
+                            <div class="col-md-4">
+                                <input id="txtColor" name="inputColor" type="text" class="form-control input-md">
+                            </div>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="txtDescription">Description</label>
+                            <div class="col-md-4">
+                                <textarea class="form-control" id="txtDescription" name="inputDescription" placeholder="any other notes about the shirt"></textarea>
+                            </div>
+                        </div>
+                        <legend>Shirt that you want</legend>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="txtCompany">Company/Organization</label>
+                            <div class="col-md-4">
+                                <input id="txtCompany" name="inputCompany2" type="text" class="form-control input-md">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="txtSize">Size</label>
+                            <div class="col-md-4">
+                                <input id="txtSize" name="inputSize2" type="text" placeholder="S, M, L, XL, ..." class="form-control input-md">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="txtColor">Color</label>
+                            <div class="col-md-4">
+                                <input id="txtColor" name="inputColor2" type="text" class="form-control input-md">
+                            </div>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="txtDescription">Description</label>
+                            <div class="col-md-4">
+                                <textarea class="form-control" id="txtDescription" name="inputDescription2" placeholder="any other notes about the shirt"></textarea>
+                            </div>
+                        </div>
+
+
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="singlebutton"></label>
+                            <div class="col-md-4">
+                                <input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Submit" />
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+            </section>
+
+            {% include 'footer.html' %}
+
+        </div>
+    </body>
+
+</html>

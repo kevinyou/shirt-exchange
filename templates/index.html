@@ -2,35 +2,23 @@
 <html lang="en">
 
     <head>
-        <title>Python Flask Bucket List App</title>
-
+        <title>UTCS Shirt Exchange</title>
 
         <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-
         <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
-
 
     </head>
 
     <body>
 
         <div class="container">
-            <div class="header">
-                <nav>
-                    <ul class="nav nav-pills pull-right">
-                        <li role="presentation" class="active"><a href="#">Home</a>
-                        </li>
-                        <li role="presentation"><a href="#">Sign In</a>
-                        </li>
-                        <li role="presentation"><a href="showSignUp">Sign Up</a>
-                        </li>
-                    </ul>
-                </nav>
-                <h3 class="text-muted">Python Flask App</h3>
-            </div>
+            
+            {% with active_page='home',user=0 %}
+                {% include 'header.html' %}
+            {% endwith %}
 
             <div class="jumbotron">
-                <h1>Bucket List App</h1>
+                <h1>Shirt Exchange</h1>
                 <p class="lead"></p>
                 <p><a class="btn btn-lg btn-success" href="showSignUp" role="button">Sign up today</a>
                 </p>
@@ -38,31 +26,26 @@
 
             <div class="row marketing">
                 <div class="col-lg-6">
-                    <h4>Bucket List</h4>
-                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+                    <h4>Buy, Sell, and Trade T-Shirts</h4>
+                    <p>Have a ton of career fair loot that you don't want? Find someone that wants it here!</p>
 
-                    <h4>Bucket List</h4>
-                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-                    <h4>Bucket List</h4>
-                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                    <h4>Trade Sizes</h4>
+                    <p>Have a XL but need an S? You can make it happen here!</p>
                 </div>
 
                 <div class="col-lg-6">
-                    <h4>Bucket List</h4>
-                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+                    <h4>Collect Rare Shirts</h4>
+                    <p>It is a truth universally acknowledged, that a Google or Facebook t-shirt is rarer than a Dropbox or ACM shirt. You can bargain for more shirts (or money) for rarer shirts!</p>
 
-                    <h4>Bucket List</h4>
-                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+                    <h4>Show Off Your Wardrobe</h4>
+                    <p>In Neopets gallery fashion (shoutout if you get the reference) you can upload pictures of your shirt collection and display them to everyone!</p>
 
-                    <h4>Bucket List</h4>
-                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                    <h4>Shirt Detection Algorithm</h4>
+                    <p>Work in progress</p>
                 </div>
             </div>
 
-            <footer class="footer">
-                <p>&copy; Company 2015</p>
-            </footer>
+            {% include 'footer.html' %}
 
         </div>
     </body>

@@ -1,0 +1,23 @@
+{% if user == 0 %}
+    {% set navigation_bar = [
+        ('/', 'home', 'Home'),
+        ('/showSignIn', 'signin', 'Sign In'),
+        ('/showSignUp', 'signup', 'Sign Up')
+    ] -%}
+{% else %}
+    {% set navigation_bar = [
+        ('/userHome', 'userhome', 'Board'),
+        ('/showAddOffer', 'addoffer', 'Add Offer'),
+        ('logout', 'logout', 'Logout')
+    ] -%}
+{% endif %}
+<div class="header">
+    <nav>
+        <ul class="nav nav-pills pull-right">
+            {% for href, id, caption in navigation_bar -%}
+            <li role="presentation" {% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <h3 class="text-muted">UTCS Shirt Exchange</h3>
+</div>
